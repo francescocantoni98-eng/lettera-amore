@@ -1,0 +1,213 @@
+:root {
+  --primary-color: #d44b61;
+  --primary-hover: #bd3b50;
+  --text-color: #4a3e3d;
+  --text-muted: #8c7a78;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-cursive: 'Great Vibes', cursive;
+  --font-sans: 'Source Sans 3', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Sfondo romantico con sfumatura calda e cuori distribuiti */
+  background-color: #fce8e6;
+  background-image: 
+    radial-gradient(#e67385 15%, transparent 16%), 
+    radial-gradient(#f099a5 15%, transparent 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  background-attachment: fixed;
+  
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Schermata di Blocco */
+.lock-screen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lock-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(212, 75, 97, 0.15);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.lock-kicker {
+  font-family: var(--font-cursive);
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: -5px;
+}
+
+.lock-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #332928;
+}
+
+.lock-copy {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.unlock-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.unlock-form input {
+  padding: 14px 16px;
+  border: 1px solid #ebd8d0;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.unlock-form input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(212, 75, 97, 0.1);
+}
+
+.unlock-form button {
+  padding: 14px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unlock-form button:hover {
+  background-color: var(--primary-hover);
+}
+
+.lock-error {
+  margin-top: 15px;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Pagina Principale Sbloccata */
+.secret-page {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-kicker {
+  font-family: var(--font-cursive);
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  margin-bottom: 8px;
+  color: #332928;
+}
+
+.hero-lead {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Lettera */
+.letter-wrap {
+  margin-bottom: 40px;
+}
+
+.letter {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(212, 75, 97, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.letter h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.letter p {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  color: #4a3e3d;
+}
+
+.letter-sign {
+  margin-top: 35px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.secret-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-bottom: 20px;
+}
