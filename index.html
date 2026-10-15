@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Per te, amore mio</title>
+    <meta name="description" content="Una pagina segreta, solo per te." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Source+Sans+3:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Schermata di Sblocco -->
+    <section id="lock-screen" class="lock-screen" aria-labelledby="lock-title">
+      <div class="lock-card">
+        <p class="lock-kicker">Qualcosa di nostro</p>
+        <h1 id="lock-title" class="lock-title">Apri il nostro segreto</h1>
+        <p class="lock-copy">
+          Inserisci la password che conosci solo tu. Poi, amore, è tutto per te.
+        </p>
+        <form id="unlock-form" class="unlock-form" autocomplete="off">
+          <label class="sr-only" for="secret-code">Codice segreto</label>
+          <input
+            id="secret-code"
+            name="code"
+            type="text"
+            inputmode="text"
+            spellcheck="false"
+            placeholder="Il nostro codice…"
+            required
+          />
+          <button type="submit">Sblocca</button>
+        </form>
+        <p id="lock-error" class="lock-error" role="status" hidden>
+          Uhm… codice errato! Riprova ❤️
+        </p>
+      </div>
+    </section>
+
+    <!-- Pagina Segreta Sbloccata -->
+    <main id="secret-page" class="secret-page" hidden aria-hidden="true">
+      <header class="hero">
+        <p class="hero-kicker">Solo per te</p>
+        <h1>Ciao, amore mio ❤️</h1>
+      </header>
+
+      <section class="letter-wrap" aria-labelledby="letter-title">
+        <article class="letter">
+          <h2 id="letter-title">Una lettera per te</h2>
+          <p>Amore mio,</p>
+          <p>
+            Ho voluto nascondere queste parole dietro un piccolo codice, così
+            restano nostre. Ho voluto fare questo esperimento di fare un sito
+            con l'aiuto dell'intelligenza artificiale e la prima cosa che mi 
+            è venuta in mente era questo piccolo giochetto per te.
+          </p>
+          Se sei riuscita ad entrare qui, vuol dire che conosci la password! Ma ci sono cose che ci tengo a dirti e che non mi stancherò mai di ripeterti.
+
+Fin da subito mi sono innamorato del tuo sorriso, soprattutto di come ti si illuminano gli occhi quando sorridi.
+
+Mi piace da morire come sei quando stiamo insieme: quando fai la bambina, quando scherziamo, e tutti i bacini e le coccole che mi fai. Ma la cosa più bella è che con te mi sento al sicuro: per me ci sei sempre quando ho bisogno e sei l'unica persona con cui riesco davvero a sfogarmi.
+
+Non me la dimenticherò mai la notte di Capodanno, quando è iniziato tutto tra di noi. Da quel momento è diventato tutto ancora più bello.
+
+Ti amerò per sempre.
+          <p>
+            <img src="" alt="">
+          </p>
+          <p class="letter-sign">Con tutto il cuore,<br />Il tuo tato</p>
+        </article>
+      </section>
+
+      <footer class="secret-footer">
+        <p>Fatto con amore — e un po’ di codice.</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
